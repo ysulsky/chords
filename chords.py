@@ -126,7 +126,7 @@ def exercise(config):
       continue
     if cur == prediction:
       cur_count += 1
-      if cur_count > 5 and switches[-1] != cur:
+      if cur_count >= 3 and switches[-1] != cur:
         switches.append(cur)
         if len(switches) > 1:
           print('{} -> {}'.format(*switches[-2:]))
